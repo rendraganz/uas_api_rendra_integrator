@@ -56,6 +56,12 @@ app.get("/integrate", async (req, res) => {
         });
 
         const finalData = [...vendorA, ...vendorB, ...vendorC];
+        const finalNumbered = {};
+        finalData.forEach((item, i) => {
+            finalNumbered[i + 1] = item;
+        });
+
+        res.json(finalNumbered);
         res.json(finalData);
     } catch (err) {
         res.status(500).json({ error: "Gagal memproses data", detail: err.message });
