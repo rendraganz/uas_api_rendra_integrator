@@ -1,0 +1,17 @@
+{
+  "name": "uas_api_rendra",
+  "version": "1.0.0",
+  "description": "uas_api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "rendraganz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "node": "^20.19.6",
+    "node-fetch": "^3.3.2"
+  }
+}
