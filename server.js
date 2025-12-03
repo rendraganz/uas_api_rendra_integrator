@@ -8,10 +8,10 @@ const linkVendorB = "https://vendorbdistro.vercel.app/distro";
 const linkVendorC = "https://prakuasvendorcnaza.vercel.app/menu";
 
 app.get("/", (req, res) => {
-    res.send("Mall Kidul Kali");
+    res.redirect("/integrate");
 });
 
-app.get("/gabungan", async (req, res) => {
+app.get("/integrate", async (req, res) => {
     try {
         const [responseA, responseB, responseC] = await Promise.all([
             fetch(linkVendorA),
@@ -63,5 +63,5 @@ app.get("/gabungan", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}/gabungan`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
