@@ -29,7 +29,7 @@ app.get("/integrate", async (req, res) => {
             nama: item.nm_brg,
             harga_final: Math.floor(parseInt(item.hrg) * 0.9),
             status: item.ket_stok === "ada" ? "Tersedia" : "Habis",
-            vendor: "Vendor A"
+            sumber: "Vendor A"
         }));
 
         // vendor b
@@ -38,7 +38,7 @@ app.get("/integrate", async (req, res) => {
             nama: item.productName,
             harga_final: item.price,
             status: item.isAvailable ? "Tersedia" : "Habis",
-            vendor: "Vendor B"
+            sumber: "Vendor B"
         }));
 
         // vendor c
@@ -51,7 +51,7 @@ app.get("/integrate", async (req, res) => {
                 nama: namaProduk,
                 harga_final: hargaFinal,
                 status: item.stock > 0 ? "Tersedia" : "Habis",
-                vendor: "Vendor C"
+                sumber: "Vendor C"
             };
         });
 
